@@ -1,0 +1,10 @@
+[package]
+name = "musicbrainz-artist-scoring"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.81"
+big_s = "1.0.2"
+calm_io = "0.1.1"
+serde_json = { version = "1.0.114", features = ["indexmap", "preserve_order"] }
