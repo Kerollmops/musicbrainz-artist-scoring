@@ -15,7 +15,15 @@ fn main() -> io::Result<()> {
 
         if let Some(artist_rating) = document.get("artist_rating").and_then(|v| v.as_u64()) {
             // create five groups, from 0 to 4
-            document.insert(S("rating"), json!(artist_rating * 4 / 100));
+            let rating = match artist_rating {
+                0..=40 => 0,
+                41..=70 => 1,
+                71..=80 => 2,
+                81..=90 => 3,
+                91.. => 4,
+            };
+
+            document.insert(S("rating"), json!(rating));
         }
 
         serde_json::to_writer(&mut stdout, &document)?;
