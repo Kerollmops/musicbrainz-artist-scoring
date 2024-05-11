@@ -2,6 +2,10 @@
 
 This repository is used to compute a 5-star rating for the MusicBrainz song dataset. You can read the formula in the code.
 
+> [!NOTE]
+> You can [use this script](https://gist.github.com/Kerollmops/e5548d09b47127ff5bddb23eaf43c992) along with the
+> [new _Edit Documents with Function_ prototype](https://meilisearch.notion.site/Edit-Documents-with-Rhai-0cff8fea7655436592e7c8a6de932062?pvs=74) to do it more easily.
+
 ## Usage
 
 1. First compile the program in release.
